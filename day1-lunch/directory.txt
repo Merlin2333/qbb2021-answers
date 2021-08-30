@@ -1,0 +1,8 @@
+total 10728
+ 760 K27me3.bed
+ 496 K4me3.bed
+ 336 K9me3.bed
+  32 LADs_Kc.bed
+2344 S2_9state.bed
+  88 dm6.chrom.sizes
+6672 fbgenes.bed
