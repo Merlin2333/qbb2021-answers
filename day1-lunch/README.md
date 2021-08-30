@@ -16,5 +16,13 @@ There are 4909 featuers annotated for K4me3
 cut -f 1 fbgenes.bed | sort | uniq -c > fbgenes.info
 
 ### Question 3c
-There are 5708 unique genes on chromosome 2L
+There are 5708 unique genes on chromosome 2L <br/>
 There are 5411 unique genes on chromosome X
+
+## Question 4
+### Question 4b
+bedtools summary -i fbgenes.bed -g dm6.chrom.sizes | column -t | head -10 > fbgenes.summary10
+
+### Question 4c
+The total number of bps of features on chromosome 2L is 54504363, and the minimum number of features on the chromosome is 210. <br/><br/>
+The average bps of the features on chromosome X is 13144.761
