@@ -16,13 +16,21 @@ There are 4909 featuers annotated for K4me3
 cut -f 1 fbgenes.bed | sort | uniq -c > fbgenes.info
 
 ### Question 3c
-There are 5708 unique genes on chromosome 2L <br/>
-There are 5411 unique genes on chromosome X
+Chromosome Y has a much smaller number of genes compared to chromosome X <br/>
+Chromosome 3R has the most number of genes
 
 ## Question 4
-### Question 4b
+### Question 4c
+~/qbb2021-answers/day1-lunch/$bedtools intersect -a fbgenes.bed -b K9me3.bed -u | cut -f 1 | uniq -c  >chr-with-fbgenes-k9.txt
+
+### Question 4d
+Chromosome Y has the lowest modifications; <br/>
+Chromosome X has the largest number of modifications. 
+
+## Question Adv 1
+### Question Adv 1b
 bedtools summary -i fbgenes.bed -g dm6.chrom.sizes | column -t | head -10 > fbgenes.summary10
 
-### Question 4c
+### Question Adv 1c
 The total number of bps of features on chromosome 2L is 54504363, and the minimum number of features on the chromosome is 210. <br/><br/>
-The average bps of the features on chromosome X is 13144.761
+The average bps of the features on chromosome X is 13144.761 <br/>
