@@ -10,10 +10,6 @@ mapping = sys.argv[1]
 #print("Input a c_tab file:\n")
 c_tab = sys.argv[2]
 
-#The 3rd sys arg as standard for replacing missing gene-protein pair from the mapping file
-#my_protein = sys.argv[3]
-
-
 #Store the gene_id and protein_id pairs from the mapping file
 gene_protein_map = {}
 #Open the mapping file
