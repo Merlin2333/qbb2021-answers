@@ -76,15 +76,7 @@ print('The number of reads that start their alignment on chromosome 2L between b
 # Question #5
 ## Count how many potential PCR duplicates are present.
 
-unique_count = 0
-for i in range(1, len(align)):
-    if (align[i][3] != align[i - 1][3]) or (align[i][5] != align[i-1][5]):
-        unique_count += 1
+unique_set = set([str(line[3]) + str(line[5]) for line in align])
 
-duplicate = count - unique_count
-
-print(unique_count)
 print('Question 5:')
-print('The number of potential PCR duplicates is', duplicate)
-
-f.close()
+print('The number of potential PCR duplicates is', count - len(set(unique_set)))
