@@ -37,7 +37,7 @@ bwa mem -R "@RG\tID:A01_63.fastq\tSM:A01_63.fastq " sacCer3.fa A01_63.fastq > A0
 
 #Step 3: Create a sorted bam file with samtools, for input to variant callers
 
-samtools merge finalBamFile.bam *.bam
+samtools merge finalBamFile.bam *.sam
 samtools index finalBamFile.bam
 
 
