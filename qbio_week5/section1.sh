@@ -20,14 +20,13 @@
 
 #Differential binding
 #Gain of CTCF binding E-G
-bedtools subtract -A -a /Users/cmdb/qbb2021-answers/qbio_week5/ER4_peaks/ER4_summits.bed -b /Users/cmdb/qbb2021-answers/qbio_week5/G1E_peaks/G1E_summits.bed > gain_CTCF_binding.bed
+bedtools subtract -A -a /Users/cmdb/qbb2021-answers/qbio_week5/ER4_peaks/ER4_peaks.narrowPeak -b /Users/cmdb/qbb2021-answers/qbio_week5/G1E_peaks/G1E_peaks.narrowPeak > gain_CTCF_binding.bed
 #Loss of CTCF binding G-E
-bedtools subtract -A -a /Users/cmdb/qbb2021-answers/qbio_week5/G1E_peaks/G1E_summits.bed -b /Users/cmdb/qbb2021-answers/qbio_week5/ER4_peaks/ER4_summits.bed > loss_CTCF_binding.bed
+bedtools subtract -A -a /Users/cmdb/qbb2021-answers/qbio_week5/G1E_peaks/G1E_peaks.narrowPeak -b /Users/cmdb/qbb2021-answers/qbio_week5/ER4_peaks/ER4_peaks.narrowPeak > loss_CTCF_binding.bed
 
 #Feature overlapping
 #E4 features overlap
 #bedtools intersect allows one to screen for overlaps between two sets of genomic features.
-#-c option: For each entry in A, report the number of hits in B while restricting to -f. Reports 0 for A entries that have no overlap with B
-# bedtools intersect -a /Users/cmdb/qbb2021-answers/qbio_week5/Mus_musculus.GRCm38.94_features.bed -b /Users/cmdb/qbb2021-answers/qbio_week5/ER4_peaks/ER4_summits.bed -wo > ER4_feature.bed
+# bedtools intersect -a /Users/cmdb/qbb2021-answers/qbio_week5/Mus_musculus.GRCm38.94_features.bed -b /Users/cmdb/qbb2021-answers/qbio_week5/ER4_peaks/ER4_peaks.narrowPeak -wo > ER4_feature.bed
 #G1E features overlap
-# bedtools intersect -a /Users/cmdb/qbb2021-answers/qbio_week5/Mus_musculus.GRCm38.94_features.bed -b /Users/cmdb/qbb2021-answers/qbio_week5/G1E_peaks/G1E_summits.bed -wo > G1E_feature.bed
+# bedtools intersect -a /Users/cmdb/qbb2021-answers/qbio_week5/Mus_musculus.GRCm38.94_features.bed -b /Users/cmdb/qbb2021-answers/qbio_week5/G1E_peaks/G1E_peaks.narrowPeak -wo > G1E_feature.bed
