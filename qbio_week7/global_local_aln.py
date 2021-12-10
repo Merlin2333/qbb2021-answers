@@ -92,6 +92,13 @@ for j in range (sequ2_len+1):
 
 #traceback matrix
 trace_mat = np.full([sequ1_len+1,sequ2_len+1], None)
+#columns
+for i in range(sequ1_len+1):
+    trace_mat[i,0] = "v"
+
+#rows
+for j in range (sequ2_len+1):
+    trace_mat[0,j] = "h"
 
 ##Populating the matrices
 def match_score(nuc1,nuc2):
