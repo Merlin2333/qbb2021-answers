@@ -49,7 +49,7 @@ freebayes -f sacCer3.fa finalBamFile.bam > yeast_variants.vcf
 #the the error rate less than 0.01 (probability of being polymorphic is greater than 0.99)
 #Thus, we are interested in the Q values (QUAL) greater than 20.
 
-vcffilter -f "QUAL > 20" yeast_variants.vcf > yeast_variants_filted.vcf
+vcffilter -f --genotype-qualities "QUAL > 20" yeast_variants.vcf > yeast_variants_filted.vcf
 
 
 #Step 6: Decompose complex haplotypes
