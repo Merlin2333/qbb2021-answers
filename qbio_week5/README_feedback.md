@@ -4,4 +4,5 @@ found the features that are IN G1E or IN ER4 but you also need the ones that are
 
 5/6
 
--Add the bedtools commands that get the bed files that have only the features in G1E and only the features in ER4
+- Add the bedtools commands that get the bed files that have only the features in G1E and only the features in ER4
+- 12/10 - I see the commands! 6/6
