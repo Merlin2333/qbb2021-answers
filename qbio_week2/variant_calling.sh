@@ -42,14 +42,14 @@ samtools index finalBamFile.bam
 
 
 #Step 4: Step 4: Variant calling with freebayes
-freebayes -f sacCer3.fa finalBamFile.bam > yeast_variants.vcf
+freebayes -f --genotype-qualities sacCer3.fa finalBamFile.bam > yeast_variants.vcf
 
 #Step 5: Filter variants based on genotype quality using vcffilter
 #The Q_sequencing = -10log_10P, P as the probability of error. We are interested in
 #the the error rate less than 0.01 (probability of being polymorphic is greater than 0.99)
 #Thus, we are interested in the Q values (QUAL) greater than 20.
 
-vcffilter -f --genotype-qualities "QUAL > 20" yeast_variants.vcf > yeast_variants_filted.vcf
+vcffilter -f "QUAL > 20" yeast_variants.vcf > yeast_variants_filted.vcf
 
 
 #Step 6: Decompose complex haplotypes
