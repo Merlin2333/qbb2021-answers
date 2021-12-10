@@ -5,3 +5,4 @@ First half of this looks awesome. With the qqplots, I suspect these look weird b
 - Remade the qqplot
 - Fix the p-values for both regressions
 - Remade the vovano plot
+- 12/10 regrade - 7/7
