@@ -3,3 +3,4 @@
 7.75/8
 
 - Added the flg in freebayes
+- 12/10 regrade - see flag updated 8/8
